@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+    <title>chart-components demo</title>
+
+    <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+
+    <script type="module">
+      import '@polymer/iron-demo-helpers/demo-pages-shared-styles';
+      import '@polymer/iron-demo-helpers/demo-snippet';
+    </script>
+
+    <script type="module" src="../charts.js"></script>
+
+    <custom-style>
+      <style is="custom-style" include="demo-pages-shared-styles">
+      </style>
+    </custom-style>
+  </head>
+  <body>
+    <div class="vertical-section-container centered">
+      <h3>Basic chart-components demo</h3>
+      <demo-snippet>
+        <template>
+          <gauge-chart chart-title  ="Hello world" id="myChart">
+            <ul border-width="0">
+              <label>20</label>
+              <label></label>
+              <li>20</li>
+              <li>80</li>
+              <ul background-color>
+                <li>red</li>
+                <li>#AAAAAAAA</li>
+              </ul>
+              <ul border-color>
+                <li>red</li>
+                <li>#AAAAAAAA</li>
+              </ul>
+            </ul>
+          </gauge-chart>
+        </template>
+      </demo-snippet>
+    </div>
+    <div class="vertical-section-container centered">
+      <h3>Basic chart-components demo</h3>
+      <demo-snippet>
+        <template>
+          <radar-chart chart-title  ="Hello world" id="myChart">
+            <label>Hello</label>
+            <label>Hello 1</label>
+            <label>Hello 2</label>
+            <label>Hello 3</label>
+            <ul border-color="#FF0000" background-color="#0000FF">Test
+              <li>1</li>
+              <li>2</li>
+              <li>3</li>
+              <li>4</li>
+            </ul>
+          </radar-chart>
+        </template>
+      </demo-snippet>
+    </div>
+
+    <div class="vertical-section-container centered">
+      <h3>Basic chart-components demo</h3>
+      <demo-snippet>
+        <template>
+          <line-chart title="Hello world" id="myChart">
+            <label>Hello</label>
+            <label>Hello 1</label>
+            <label>Hello 2</label>
+            <label>Hello 3</label>
+            <ul border-color="#FF0000" background-color="#0000FF">Test
+              <li>1</li>
+              <li>2</li>
+              <li>3</li>
+              <li>4</li>
+            </ul>
+          </line-chart>
+        </template>
+      </demo-snippet>
+    </div>
+
+    <div class="vertical-section-container centered">
+      <demo-snippet>
+          <template>
+              <bar-chart title="Hello world" id="myBarChart">
+                <label>Hello</label>
+                <label>Hello 1</label>
+                <label>Hello 2</label>
+                <label>Hello 3</label>
+                <ul id="barDataSet1">Test
+                  <li>1</li>
+                  <li>2</li>
+                  <li>3</li>
+                  <li>4</li>
+                  <ul border-color>
+                    <li>rgba(255, 99, 132, 0.2)</li>
+                    <li>rgba(255, 129, 132, 0.2)</li>
+                    <li>rgba(255, 189, 132, 0.2)</li>
+                    <li>rgba(255, 229, 132, 0.2)</li>
+                  </ul>
+                  <ul background-color>
+                    <li>rgba(255, 99, 132, 0.2)</li>
+                    <li>rgba(255, 129, 132, 0.2)</li>
+                    <li>rgba(255, 189, 132, 0.2)</li>
+                    <li>rgba(255, 229, 132, 0.2)</li>
+                  </ul>
+                </ul>
+                <ul id="barDataSet2">Test 2
+                  <li>4</li>
+                  <li>3</li>
+                  <li>2</li>
+                  <li id="barDataSet2Item1">1</li>
+                  <ul border-color>
+                    <li>rgba(255, 99, 132, 0.2)</li>
+                    <li>rgba(255, 129, 132, 0.2)</li>
+                    <li>rgba(255, 189, 132, 0.2)</li>
+                    <li>rgba(255, 229, 132, 0.2)</li>
+                  </ul>
+                  <ul background-color>
+                    <li>rgba(255, 99, 132, 0.2)</li>
+                    <li>rgba(255, 129, 132, 0.2)</li>
+                    <li>rgba(255, 189, 132, 0.2)</li>
+                    <li>rgba(255, 229, 132, 0.2)</li>
+                  </ul>
+                </ul>
+              </bar-chart>
+          </template>
+      </demo-snippet>
+    </div>
+
+
+  </body>
+</html>

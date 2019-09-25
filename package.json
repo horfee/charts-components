@@ -1,0 +1,41 @@
+{
+  "name": "chart-components",
+  "version": "0.1.0",
+  "description": "web components wrapping chart.js library",
+  "main": "charts.js",
+  "scripts": {
+    "test": "mocha --reporter spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/horfee/charts-components.git"
+  },
+  "keywords": [
+    "Node",
+    "JS",
+    "chartjs",
+    "chart",
+    "web-components"
+  ],
+  "author": "Horfee",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/horfee/charts-components/issues"
+  },
+  "homepage": "https://github.com/horfee/charts-components#readme",
+
+  "dependencies": {
+    "@polymer/polymer": "^3.0.0",
+    "chart.js": "^2.8.0",
+    "moment": "^2.23.0"
+  },
+  "devDependencies": {
+    "@polymer/iron-demo-helpers": "^3.0.0-pre.19",
+    "@polymer/test-fixture": "^4.0.2",
+    "@webcomponents/webcomponentsjs": "^2.0.0",
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0",
+    "wct-mocha": "^1.0.0"
+  }
+}
+

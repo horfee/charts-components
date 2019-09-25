@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+    <title>chart-components demo</title>
+
+    <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+
+    <script type="module">
+      import '@polymer/iron-demo-helpers/demo-pages-shared-styles';
+      import '@polymer/iron-demo-helpers/demo-snippet';
+    </script>
+
+    <script type="module" src="../charts.js"></script>
+
+    <custom-style>
+      <style is="custom-style" include="demo-pages-shared-styles">
+      </style>
+    </custom-style>
+  </head>
+  <body>
+    <div class="vertical-section-container centered">
+      <h3>Basic line-chart demo</h3>
+          <line-chart title="Hello world" id="myLineChart">
+            <label>Hello</label>
+            <label>Hello 1</label>
+            <label>Hello 2</label>
+            <label>Hello 3</label>
+            <ul id="lineDataSet1" border-color="#FF0000" background-color="#0000FF">Test
+              <li data-type="int">1</li>
+              <li data-type="int">2</li>
+              <li data-type="int">3</li>
+              <li data-type="int">4</li>
+            </ul>
+            <ul id="lineDataSet2" border-color="#0000FF" background-color="#FF0000">Test 2
+              <li data-type="int">4</li>
+              <li data-type="int">3</li>
+              <li data-type="int">2</li>
+              <li data-type="int" id="lineDataSet2Item1">1</li>
+            </ul>
+          </line-chart>
+    </div>
+
+    <div class="vertical-section-container centered">
+      <h3>Basic bar-chart demo</h3>
+          <bar-chart title="Hello world" id="myBarChart">
+            <label>Hello</label>
+            <label>Hello 1</label>
+            <label>Hello 2</label>
+            <label>Hello 3</label>
+            <ul id="barDataSet1">Test
+              <li data-type="int">1</li>
+              <li data-type="int">2</li>
+              <li data-type="int">3</li>
+              <li data-type="int">4</li>
+              <ul border-color>
+                <li>rgba(255, 99, 132, 0.2)</li>
+                <li>rgba(255, 129, 132, 0.2)</li>
+                <li>rgba(255, 189, 132, 0.2)</li>
+                <li>rgba(255, 229, 132, 0.2)</li>
+              </ul>
+              <ul background-color>
+                <li>rgba(255, 99, 132, 0.2)</li>
+                <li>rgba(255, 129, 132, 0.2)</li>
+                <li>rgba(255, 189, 132, 0.2)</li>
+                <li>rgba(255, 229, 132, 0.2)</li>
+              </ul>
+            </ul>
+            <ul id="barDataSet2">Test 2
+              <li data-type="int">4</li>
+              <li data-type="int" id="insertBeforeMe">3</li>
+              <li data-type="int">2</li>
+              <li data-type="int" id="barDataSet2Item1">1</li>
+              <ul border-color>
+                <li>rgba(255, 99, 132, 0.2)</li>
+                <li>rgba(255, 129, 132, 0.2)</li>
+                <li>rgba(255, 189, 132, 0.2)</li>
+                <li>rgba(255, 229, 132, 0.2)</li>
+              </ul>
+              <ul background-color>
+                <li>rgba(255, 99, 132, 0.2)</li>
+                <li>rgba(255, 129, 132, 0.2)</li>
+                <li>rgba(255, 189, 132, 0.2)</li>
+                <li>rgba(255, 229, 132, 0.2)</li>
+              </ul>
+            </ul>
+          </bar-chart>
+    </div>
+
+    <script type="text/javascript">
+      setTimeout(function(){
+        var chart = document.getElementById("myLineChart");
+        var newLabel = document.createElement("label");
+        newLabel.innerHTML = "toto";
+        chart.appendChild(newLabel);
+        chart.removeChild(chart.children[1]);
+        document.getElementById("barDataSet1").remove();
+        
+      }, 1000);
+      setTimeout(function() {
+        document.getElementById("barDataSet2Item1").innerHTML = 100;
+
+        var n = document.getElementById("insertBeforeMe");
+        var newData = document.createElement("li");
+        newData.innerHTML = "53";
+
+        document.getElementById("barDataSet2").insertBefore(newData, n);
+        newData.remove();
+
+      }, 5000);
+    </script>
+   
+  </body>
+</html>

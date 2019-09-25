@@ -1,0 +1,9 @@
+import './area-chart.js';
+import './bar-chart.js';
+import './bubble-chart.js';
+import './doughnut-pie-chart.js';
+import './gauge-chart.js';
+import './line-chart.js';
+import './polar-area-chart.js';
+import './radar-chart.js';
+import './scatter-chart.js';
