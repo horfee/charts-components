@@ -27,7 +27,7 @@
   "dependencies": {
     "@polymer/polymer": "^3.0.0",
     "chart.js": "^2.8.0",
-    "moment": "^2.23.0"
+    "moment": "^2.29.2"
   },
   "devDependencies": {
     "@polymer/iron-demo-helpers": "^3.0.0-pre.19",
